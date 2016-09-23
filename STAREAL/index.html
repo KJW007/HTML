@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>星锐娱乐</title>
+<link rel="stylesheet" href="css/index.css" type="text/css" />
+<script src="jQuery/jquery-1.9.1.min.js"></script>
+<script src="js/index.js"></script>
+<link rel="shortcut icon"type="image/x-icon" href="images/xy.ico"media="screen" />
+</head>
+<body>
+<script>
+
+</script>
+<div class='login_dialog' id='dialog'>
+	<div class='login_dialog_box'>
+		<div class='login_dialog_box_top'>
+			<div class='login_dialog_box_top_login'>
+				<a href='javascript:ClickLogin()'>登录</a>
+			</div>
+			<div class='login_dialog_box_top_register'>
+				<a href='javascript:ClickRegister()'>注册</a>
+			</div>
+			<div class='login_dialog_box_top_close'><a href='javascript:ClickClose()'>X</a></div>
+		</div>
+		<div class='login_dialog_box_mid'>
+			<div class='login'>	
+			    <div class='return_info'>
+			    	
+			    </div>
+				<form action="javascript:login()" method="post" id='loginform' >
+					<input type='text' placeholder='请输入手机号' id='username' name='mobile' maxlength='11' onblur="CheckPhonenumber()" required>
+					<input type='password'placeholder='请输入密码' id='password' name='password' maxlength='12' required>
+					<input type="submit" id='submit' name='submit' value='立即登陆'>
+				</form>
+			</div>
+			<div class='register'>
+			 <div class='return_info'>
+			    	
+			    </div>
+				<form action="javascript:register()" method="post" id='registerform' >
+					<input type='text' placeholder='请输入手机号' id='phone' name='mobile' maxlength='11' required>
+					<input type='text'placeholder='请输入验证码' id='code' name='code' maxlength='4' required>
+					<input class="http://stareal.cn/mobile/app/login/code/retrieve" id="code_btn" onclick='a()' value='获取验证码'>
+					<input type='text' placeholder='请输入昵称' id='nickname' name='nickname' maxlength='6' required>
+					<input type='password'placeholder='请输入密码' id='rpassword' name='password' maxlength='12' required>
+					<input type='submit' id='submit' name='submit' value='立即注册'>
+				</form>
+			</div>
+		</div>
+		<div class='login_dialog_box_bottom'>
+			
+		</div>
+	</div>
+</div>
+<div class='fix'>
+	<div class='fix_mid'>
+		<div class='fix_mid_left'>
+			<img src='images/fix_logo.png'>
+		</div>
+		<div class='fix_mid_mid'>
+			<input  class='input_main' placeholder='罗志祥2016 CREAZY WORLD 世界巡回演唱会北京站' type='text' id='input_main_fix'><input type='button' id='search' value='搜索'>
+		</div>
+		<div class='fix_mid_right'>
+		
+		</div>
+	</div>
+</div>
+<div class='cover'>
+	<div class='cover_nav'>
+		<div class='cover_nav_left'>
+			<a href='#'>首页</a>
+		</div>
+		
+		<div class='cover_nav_right'>
+			<div class='cover_nav_right_text1'>
+				<a href='javascript:Login()' class='a_login'>登录</a>
+				<p class='nickname'></p>
+			</div>
+			<div class='cover_nav_right_pic'>
+				<img style='margin-top:7px;float:right;' src='images/cover_phone.png'>
+			</div>
+			<div class='cover_nav_right_text2'>
+				<a href='#'>手机版</a>
+			</div>
+			
+		</div>
+		<div class='cover_nav_hp'>
+			<img src='' id='person_hp'>
+		</div>
+	</div>
+</div>
+
+<div class='top'>
+	<div class='top_nav'>
+		<div class='top_nav_left'>
+			<img src='images/top_logo.png'>
+			<div class='top_nav_left_address'>上海</div>
+		</div>
+		<div class='top_nav_mid'>
+			<input	class='input_main' placeholder='罗志祥2016 CREAZY WORLD 世界巡回演唱会北京站' type='text' id='input_main_top'><input type='button' id='search' value='搜索'>
+			<div class='top_mav_mid_buttom'>
+				<table>
+					<tr>
+						<td><a href='#'>张学友</a></td>
+						<td><a href='#'>李荣浩</a></td>
+						<td><a href='#'>周杰伦</a></td>
+						<td><a href='#'>陈奕迅</a></td>
+						<td><a href='#'>刘若英</a></td>
+						<td><a href='#'>梁静茹</a></td>
+						<td><a href='#'>华晨宇</a></td>
+						<td><a href='#'>刘若英</a></td>
+						<td><a href='#'>梁静茹</a></td>
+						<td><a href='#'>华晨宇</a></td>
+					</tr>
+				</table>
+			</div>		
+		</div>
+		<div class='top_nav_right'></div>
+	</div>
+</div>
+<div class='mid_nav'>
+	<div class='mid_top'>
+		<div class='mid_top_mid'>
+			<a href="javascript:void(0)"><div class='box' onmouseenter="OnBox1()" onmouseleave="LeaveBox1()">
+				全部分类
+				<div class='list_bar1'>
+					<ul>
+						<li>演唱会</li>
+						<li>话剧</li>
+						<li>体育赛事</li>
+						<li>同城活动</li>
+						<li>音乐会</li>
+						<li>展览</li>
+						<li>亲子</li>
+						<li>星锐独享</li>
+					</ul>
+				</div>
+			</div></a>
+			<a href="javascript:void(0)"><div class='box'>
+				近期活动
+				
+			</div></a>
+			<a href="javascript:void(0)"><div class='box'>
+				热门推荐
+			</div></a>
+			<a href="javascript:void(0)"><div class='box'>
+				尾票
+			</div></a>	
+		</div>	
+	</div>
+	
+			
+	
+</div>
+<div class='mid_mid'>
+	<div class='mid_mid_mid'>
+		<img src='images/ad_pic1.png' id='ad01'>
+	</div>
+</div>
+<div class='mid_buttom'>
+	<div class='mid_buttom_bar'>
+		<div class='mid_buttom_bar_top'>
+			<div class='mid_buttom_bar_top_left'>
+				近期活动
+			</div>
+			<div class='mid_buttom_bar_top_right'>
+				<a href='#'>查看更多>></a>
+			</div>
+		</div>	
+			<div class='line'>
+				<img src='images/line.png'>
+			</div>
+			<div class='mid_ad_tol'>
+				<div class='mid_ad_bh'>
+					<div class='mid_ad_pic'>
+						<img src='images/qd.png' id='p1'>
+					</div>
+					<div class='mid_ad_text' id='t1'>
+						
+					</div>
+					<div class='mid_ad_price' id='pr1'>
+						￥暂无报价
+					</div>
+				</div>
+				<div class='mid_ad'>
+					<div class='mid_ad_pic'>
+						<img src='images/qd.png' id='p2'>
+					</div>
+					<div class='mid_ad_text' id='t2'>
+						
+					</div>
+					<div class='mid_ad_price' id='pr2'>
+						￥暂无报价
+					</div>
+				</div>
+				<div class='mid_ad'>
+					<div class='mid_ad_pic'>
+						<img src='images/qd.png' id='p3'>
+					</div>
+					<div class='mid_ad_text' id='t3'>
+						
+					</div>
+					<div class='mid_ad_price' id='pr3'>
+						￥暂无报价
+					</div>
+				</div>
+				<div class='mid_ad'>
+					<div class='mid_ad_pic'>
+						<img src='images/qd.png' id='p4'>
+					</div>
+					<div class='mid_ad_text' id='t4'>
+						
+					</div>
+					<div class='mid_ad_price' id='pr4'>
+						￥暂无报价
+					</div>
+				</div>
+				<div class='mid_ad'>
+					<div class='mid_ad_pic'>
+						<img src='images/qd.png' id='p5'>
+					</div>
+					<div class='mid_ad_text' id='t5'>
+						
+					</div>
+					<div class='mid_ad_price' id='pr5'>
+						￥暂无报价
+					</div>
+				</div>
+				<div class='mid_ad'>
+					<div class='mid_ad_pic'>
+						<img src='images/qd.png' id='p6'>
+					</div>
+					<div class='mid_ad_text' id='t6'>
+						
+					</div>
+					<div class='mid_ad_price' id='pr6'>
+						￥暂无报价
+					</div>
+				</div>
+			</div>
+		
+	</div>
+	<div class='mid_buttom_bar'>
+			<div class='mid_buttom_bar_top'>
+			<div class='mid_buttom_bar_top_left'>
+				热门推荐
+			</div>
+			<div class='mid_buttom_bar_top_right'>
+				<a href='#'>查看更多>></a>
+			</div>
+		</div>	
+			<div class='line'>
+				<img src='images/line.png'>
+			</div>
+			<div class='mid_ad_tol'>
+				<div class='mid_ad_bh'>
+					<div class='mid_ad_pic'>
+						<img src='images/qd.png' id='hp1'>
+					</div>
+					<div class='mid_ad_text' id='ht1'>
+						敬请期待
+					</div>
+					<div class='mid_ad_price' id='hpr1'>
+						￥暂无报价
+					</div>
+				</div>
+				<div class='mid_ad'>
+					<div class='mid_ad_pic'>
+						<img src='images/qd.png'  id='hp2'>
+					</div>
+					<div class='mid_ad_text' id='ht2'> 
+						敬请期待
+					</div>
+					<div class='mid_ad_price' id='hpr2'>
+						￥暂无报价
+					</div>
+				</div>
+				<div class='mid_ad'>
+					<div class='mid_ad_pic'>
+						<img src='images/qd.png' id='hp3'>
+					</div>
+					<div class='mid_ad_text' id='ht3'>
+						敬请期待
+					</div>
+					<div class='mid_ad_price' id='hpr3'>
+						￥暂无报价
+					</div>
+				</div>
+				<div class='mid_ad'>
+					<div class='mid_ad_pic'>
+						<img src='images/qd.png' id='hp4'>
+					</div>
+					<div class='mid_ad_text' id='ht4'>
+						敬请期待
+					</div>
+					<div class='mid_ad_price' id='hpr4'>
+						￥暂无报价
+					</div>
+				</div>
+				<div class='mid_ad'>
+					<div class='mid_ad_pic'>
+						<img src='images/qd.png' id='hp5'>
+					</div>
+					<div class='mid_ad_text' id='ht5'>
+						敬请期待
+					</div>
+					<div class='mid_ad_price' id='hpr5'>
+						￥暂无报价
+					</div>
+				</div>
+				<div class='mid_ad'>
+					<div class='mid_ad_pic'>
+						<img src='images/qd.png' id='hp6'>
+					</div>
+					<div class='mid_ad_text' id='ht6'>
+						敬请期待
+					</div>
+					<div class='mid_ad_price' id='hpr6'>
+						￥暂无报价
+					</div>
+				</div>
+			</div>
+	</div>
+	<div class='mid_buttom_bar'>
+			<div class='mid_buttom_bar_top'>
+			<div class='mid_buttom_bar_top_left'>
+				尾票
+			</div>
+			<div class='mid_buttom_bar_top_right'>
+				<a href='#'>查看更多>></a>
+			</div>
+		</div>	
+			<div class='line'>
+				<img src='images/line.png'>
+			</div>
+			<div class='mid_ad_tol'>
+				<div class='mid_ad_bh'>
+					<div class='mid_ad_pic'>
+						<img src='images/qd.png' id='wp1'>
+					</div>
+					<div class='mid_ad_text' id='wt1'>
+						敬请期待
+					</div>
+					<div class='mid_ad_price' id='wpr1'>
+						￥暂无报价
+					</div>
+				</div>
+				<div class='mid_ad'>
+					<div class='mid_ad_pic'>
+						<img src='images/qd.png' id='wp2'>
+					</div>
+					<div class='mid_ad_text' id='wt2'>
+						敬请期待
+					</div>
+					<div class='mid_ad_price' id='wpr2'>
+						￥暂无报价
+					</div>
+				</div>
+				<div class='mid_ad'>
+					<div class='mid_ad_pic'>
+						<img src='images/qd.png' id='wp3'>
+					</div>
+					<div class='mid_ad_text' id='wt3'>
+						敬请期待
+					</div>
+					<div class='mid_ad_price' id='wpr3'>
+						￥暂无报价
+					</div>
+				</div>
+				<div class='mid_ad'>
+					<div class='mid_ad_pic'>
+						<img src='images/qd.png' id='wp4'>
+					</div>
+					<div class='mid_ad_text' id='wt4'>
+						敬请期待
+					</div>
+					<div class='mid_ad_price' id='wpr4'>
+						￥暂无报价
+					</div>
+				</div>
+				<div class='mid_ad'>
+					<div class='mid_ad_pic'>
+						<img src='images/qd.png' id='wp5'>
+					</div>
+					<div class='mid_ad_text' id='wt5'>
+						敬请期待
+					</div>
+					<div class='mid_ad_price' id='wpr5'>
+						￥暂无报价
+					</div>
+				</div>
+				<div class='mid_ad'>
+					<div class='mid_ad_pic' >
+						<img src='images/qd.png' id='wp6'>
+					</div>
+					<div class='mid_ad_text' id='wt6'>
+						敬请期待
+					</div>
+					<div class='mid_ad_price' id='wpr6'>
+						￥暂无报价
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
+<div class='bottom'>
+	<div class='bottom_nav'>
+		<div class='bottom_nav_left'>
+			<img src='images/bottom_logo.png'>
+		</div>
+		<div class='bottom_nav_mid'>
+			<div class='bottom_text'>
+				<a href='about.html' >关于我们</a>
+			</div>
+			<div class='bottom_text'>
+				<a href='#'>联系我们</a>
+			</div>
+			<div class='bottom_text'>
+				<a href='#'>常见问题</a>
+			</div>
+		</div>
+		<div class='bottom_nav_right'>
+			<div class='info'>
+				<img src='images/info.png'>
+			</div>
+			<div class='info'>
+				<img src='images/info.png'>
+			</div>
+		</div>
+	</div>
+</div>
+<div class='foot'>
+	<div class='foot_text'>
+		上海星鱼文化传播有限公司   沪ICP783767930
+	</div>
+</div>
+</body>
+</html>

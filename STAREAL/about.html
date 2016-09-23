@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>关于我们</title>
+<link rel="stylesheet" href="css/about.css" type="text/css" />
+<script src="jQuery/jquery-1.9.1.min.js"></script>
+<script src="js/about.js"></script>
+<link rel="shortcut icon"type="image/x-icon" href="images/xy.ico"media="screen" />
+</head>
+<body>
+<div class='login_dialog' id='dialog'>
+	<div class='login_dialog_box'>
+		<div class='login_dialog_box_top'>
+			<div class='login_dialog_box_top_login'>
+				<a href='javascript:ClickLogin()'>登录</a>
+			</div>
+			<div class='login_dialog_box_top_register'>
+				<a href='javascript:ClickRegister()'>注册</a>
+			</div>
+			<div class='login_dialog_box_top_close'><a href='javascript:ClickClose()'>X</a></div>
+		</div>
+		<div class='login_dialog_box_mid'>
+			<div class='login'>	
+				<form action="http://stareal.cn/mobile/app/login/user/retrieve" method="post" >
+					<input type='text' placeholder='请输入手机号' id='username' name='mobile' maxlength='11' onblur="CheckPhonenumber()" required>
+					<input type='password'placeholder='请输入密码' id='password' name='password' maxlength='12' required>
+					<input type='submit' id='submit' name='submit' value='立即登陆'>
+				</form>
+			</div>
+			<div class='register'>
+				<form action="http://stareal.cn/mobile/app/login/user/create" method="post" >
+					<input type='text' placeholder='请输入手机号' id='phone' name='phone' maxlength='11' required>
+					<input type='text'placeholder='请输入验证码' id='code' name='code' maxlength='6' required>
+					<a href="javascript:;" id="code_btn"  >获取验证码</a>
+					<input type='text' placeholder='请输入昵称' id='nickname' name='nickname' maxlength='6' required>
+					<input type='password'placeholder='请输入密码' id='password' name='password' maxlength='12' required>
+					<input type='submit' id='submit' name='submit' value='立即注册'>
+				</form>
+			</div>
+		</div>
+		<div class='login_dialog_box_bottom'>
+			
+		</div>
+	</div>
+</div>
+<div class='fix'>
+	<div class='fix_mid'>
+		<div class='fix_mid_left'>
+			<img src='images/fix_logo.png'>
+		</div>
+		<div class='fix_mid_mid'>
+			<input  class='input_main' placeholder='罗志祥2016 CREAZY WORLD 世界巡回演唱会北京站' type='text' id='input_main_fix'><input type='button' id='search' value='搜索'>
+		</div>
+		<div class='fix_mid_right'>
+		
+		</div>
+	</div>
+</div>
+<div class='cover'>
+	<div class='cover_nav'>
+		<div class='cover_nav_left'>
+			<a href='index.html'>首页</a>
+		</div>
+		<div class='cover_nav_right'>
+			<div class='cover_nav_right_text1'>
+				<a href='javascript:Login()'>登录</a>
+			</div>
+			<div class='cover_nav_right_pic'>
+				<img style='margin-top:7px;float:right;' src='images/cover_phone.png'>
+			</div>
+			<div class='cover_nav_right_text2'>
+				<a href='#'>手机版</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<div class='top'>
+	<div class='top_nav'>
+		<div class='top_nav_left'>
+			<img src='images/top_logo.png'>
+			<div class='top_nav_left_address'>上海</div>
+		</div>
+		<div class='top_nav_mid'>
+			<input	class='input_main' placeholder='罗志祥2016 CREAZY WORLD 世界巡回演唱会北京站' type='text' id='input_main_top'><input type='button' id='search' value='搜索'>
+			<div class='top_mav_mid_buttom'>
+				<table>
+					<tr>
+						<td><a href='#'>张学友</a></td>
+						<td><a href='#'>李荣浩</a></td>
+						<td><a href='#'>周杰伦</a></td>
+						<td><a href='#'>陈奕迅</a></td>
+						<td><a href='#'>刘若英</a></td>
+						<td><a href='#'>梁静茹</a></td>
+						<td><a href='#'>华晨宇</a></td>
+						<td><a href='#'>刘若英</a></td>
+						<td><a href='#'>梁静茹</a></td>
+						<td><a href='#'>华晨宇</a></td>
+					</tr>
+				</table>
+			</div>		
+		</div>
+		<div class='top_nav_right'></div>
+	</div>
+</div>
+<div class='mid_nav'>
+	<div class='mid_top'>
+		<div class='mid_top_mid'>
+			<div class='box' onmouseenter="OnBox1()" onmouseleave="LeaveBox1()">
+				全部分类
+				<div class='list_bar1'>
+				<ul  onmouseleave="LeaveUl1()">
+					<li>演唱会</li>
+					<li>话剧</li>
+					<li>体育赛事</li>
+					<li>同城活动</li>
+					<li>音乐会</li>
+					<li>展览</li>
+					<li>亲子</li>
+					<li>星锐独享</li>
+				</ul>
+			</div>
+			</div>
+			<div class='box'>
+				近期活动
+			</div>
+			<div class='box'>
+				热门推荐
+			</div>
+			<div class='box'>
+				尾票
+			</div>		
+		</div>	
+	</div>
+	
+</div>
+<div class='mid_mid'>
+	<div class='mid_mid_mid'>
+		<div class='mid_hp'>
+			<img style="width: 100px;height: 100px;border-radius:50%"  src='images/ad01.png'>
+		</div>
+		<div class='mid_text'>
+			PEsasadsson
+		</div>
+</div>
+</div>
+<div class='mid_bottom'>
+	<div class='mid_bottom_mid'>
+		<div class='choose'>
+			<div class='mylist'>
+				我的星锐
+			</div>
+			<a href='javascript:choose(1)'><div class='choose_bar' id='bar1'>
+				关于我们
+			</div></a>
+			<a href='javascript:choose(2)'><div class='choose_bar' id='bar2'>
+				我的优惠券
+			</div></a>
+			<a href='javascript:choose(3)'><div class='choose_bar' id='bar3'>
+				地址管理
+			</div></a>
+			<a href='javascript:choose(4)'><div class='choose_bar' id='bar4'>
+				我的订单
+			</div></a>
+			<a href='javascript:choose(5)'><div class='choose_bar' id='bar5'>
+				账户设置
+			</div></a>
+		</div>
+		<div class='nav1'>
+			<div class='nav1_title1'>
+				<div class='nav1_sign'>
+					
+				</div>
+				关于星锐
+			</div>
+			<div class='nav1_text1'>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;演出资讯，演出票务及演出周边，一样不少。聚焦在文化演出与体育赛事领域的交易与交流平台，可以买票
+				，也可以卖票，可以报名，也可以招募，可以交流，也可以分享。
+			</div>
+			<div class='nav1_title1' style="border: none">
+				<div class='nav1_sign'>
+					
+				</div>
+				联系电话
+			</div>
+			<div class='nav1_text1' >
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;客服电话：800820-8820
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;客服电话：800820-8820
+			</div>
+		
+			<div class='nav1_title1' style="border: none">
+				<div class='nav1_sign'>
+					
+				</div>
+				联系地址
+			</div>
+			<div class='nav1_text1'>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上海市虹口区新兴路sohu大厦a311上海星鱼文化传播有限公司
+			</div>
+		</div>
+		<div class='nav2'>
+			<div class='cheap_ticket'>
+			
+			</div>
+		
+		
+		</div>
+		<div class='nav3'>
+			
+		
+		
+		</div>
+		<div class='nav4'>
+		
+		
+		
+		</div>
+		<div class='nav5'>
+			<div class='nav1_title1' style="border: none">
+				<div class='nav1_sign'>
+					
+				</div>
+				个人资料
+			</div>
+			<div class='nav5_info'>
+				<div class='nav5_bar'>
+					<div class='nav5_little_title'>姓名</div><input  id='i1' class='nav5_text_input' type='text' value='周杰伦' readonly>
+				</div>
+				<div class='nav5_bar'>
+					<div class='nav5_little_title'>手机号</div><input   id='i2'  class='nav5_text_input' type='text' value='13568456985' readonly>
+				</div>
+				<div class='nav5_bar'>
+					<div class='nav5_little_title'>性别</div><input    id='i3' class='nav5_text_input' type='text' value='男' readonly>
+				</div>
+				<div class='nav5_bar'>
+					<div class='nav5_little_title'>生日</div><input   id='i4'  class='nav5_text_input' type='text' value='1994-9-30' readonly>
+				</div>
+			</div>
+			<input id='nav5btn' type="button" value='编辑' onclick="change()">
+			
+		</div>
+		
+		
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class='bottom'>
+	<div class='bottom_nav'>
+		<div class='bottom_nav_left'>
+			<img src='images/bottom_logo.png'>
+		</div>
+		<div class='bottom_nav_mid'>
+			<div class='bottom_text'>
+				<a href='#'>关于我们</a>
+			</div>
+			<div class='bottom_text'>
+				<a href='#'>联系我们</a>
+			</div>
+			<div class='bottom_text'>
+				<a href='#'>常见问题</a>
+			</div>
+		</div>
+		<div class='bottom_nav_right'>
+			<div class='info'>
+				<img src='images/info.png'>
+			</div>
+			<div class='info'>
+				<img src='images/info.png'>
+			</div>
+		</div>
+	</div>
+</div>
+<div class='foot'>
+	<div class='foot_text'>
+		上海星鱼文化传播有限公司   沪ICP783767930
+	</div>
+</div>
+</body>
+</html>
